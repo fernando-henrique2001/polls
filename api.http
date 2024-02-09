@@ -1,0 +1,22 @@
+### create poll
+
+POST http://localhost:3333/polls
+Content-Type: application/json
+
+{
+  "title": "What is your favorite programming language?",
+  "options": ["JavaScript", "TypeScript", "Python", "Ruby", "Go", "Rust", "C++", "C#"]
+}
+
+### get poll
+
+GET http://localhost:3333/polls/3b01ec9e-5fa9-4cd9-8f46-594adf6e7e78
+
+### vote on poll
+
+POST http://localhost:3333/polls/3b01ec9e-5fa9-4cd9-8f46-594adf6e7e78/votes
+Content-Type: application/json
+
+{
+  "pollOptionId": "e47717aa-51e7-4cd7-80c9-9e86a082d0b9"
+  }
